@@ -21,7 +21,8 @@ class Auth:
     def __init__(
         self,
         client_id: int,
-        client_hash: str, client: Optional[AIOHTTPClient] = None,
+        client_hash: str,
+        client: Optional[AIOHTTPClient] = None,
         two_auth: Optional[BaseTwoAuth] = None,
     ):
         self.client = client or AIOHTTPClient()

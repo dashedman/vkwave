@@ -1,4 +1,4 @@
-from enum import Enum
+from enum import Enum, IntEnum
 
 from pydantic import BaseModel, Field
 
@@ -18,7 +18,7 @@ class ClientHash(Enum):
     VK_ME = 'qVxWRF1CwHERuIrKBnqe'
 
 
-class ClientID(Enum):
+class ClientID(IntEnum):
     ANDROID_APP = 2274003
     WINDOWS_APP = 3697615
     IPHONE_APP = 3140623

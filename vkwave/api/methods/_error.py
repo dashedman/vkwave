@@ -46,6 +46,16 @@ class APIError(Exception):
         self.message = f"[{code}] {message}"
         super().__init__(self.message)
 
+class AccessDenied(APIError):
+    def __init__(self, message: str, request_params: dict):
+        code = -1
+        super().__init__(code, message, request_params)
+
+class AudioUrlDecodeError(APIError):
+    def __init__(self, message: str):
+        code = -1
+        request_params={}
+        super().__init__(code, message, request_params)
 
 _NO_DEFAULT_HANDLER = object()
 
